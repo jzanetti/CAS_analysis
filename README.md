@@ -1,5 +1,5 @@
 # CAS_analysis
-This is a reporsitory analyzing the [open data crash statistics](https://opendata-nzta.opendata.arcgis.com/datasets/crash-analysis-system-cas-data-1/explore?location=-20.304565%2C0.000000%2C2.92) from NZTA. The data are created mainly using **_python_**, while some visualizations are presented with **_html_** and **_javascript_**.
+This is a reporsitory analyzing the [open data crash statistics](https://opendata-nzta.opendata.arcgis.com/datasets/crash-analysis-system-cas-data-1/explore?location=-20.304565%2C0.000000%2C2.92) from NZTA. The system is created mainly using **_python_**, while some visualizations are presented with **_html_** and **_javascript_**.
 
 There are mainly four components in this reporsitory:
 - `cli/cli_preproc.py`: downloading and decoding the dataset, and doing the quality control if it is needed. (Note that for this version, only `csv` can be accepted as the input data format)
@@ -7,7 +7,7 @@ There are mainly four components in this reporsitory:
 - `cli/cli_temporal_analysis.py`: conducting temporal analysis for dataset, e.g.,
     - national wide crash changes over years
     - regional crash changes over years
-    - the changes of cross-correlations between crash and weather over years
+    - the changes of cross-correlations between crash and other factors (e.g., weather) over years
 
 - `cli/cli_spatial_analysis.py`: conducting spatial analysis for dataset, e.g.,
     - display the map for crashes or crashes per capita
@@ -17,10 +17,14 @@ There are mainly four components in this reporsitory:
     - post event analysis
 
 # How to install the package
-The package is managed by _conda_(or _mamba_), and can be installed using the provided `makefile`:
+The package is managed by _conda_(and _mamba_), and can be installed using the provided `makefile`:
+
+### Install through conda
 ```
 make build_conda_env_from_scratch
 ```
+
+### Create a docker image
 If we need to create a docker image for the system, we can run:
 ```
 make install

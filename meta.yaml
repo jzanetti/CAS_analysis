@@ -10,10 +10,10 @@ build:
   script:
     - $PYTHON setup.py install
   entry_points:
-    - data_preproc      = cli.data_preproc:main
-    - temporal_analysis = cli.temporal_analysis:main
-    - spatial_analysis = cli.spatial_analysis:main
-    - feature_analysis = cli.feature_analysis:main
+    - data_preproc      = cli.cli_data_preproc:main
+    - temporal_analysis = cli.cli_temporal_analysis:main
+    - spatial_analysis = cli.cli_spatial_analysis:main
+    - feature_analysis = cli.cli_feature_analysis:main
 
 requirements:
   build:
@@ -26,6 +26,7 @@ requirements:
     - xgboost
     - scikit-learn
     - dask
+    - matplotlib
     - basemap
     - basemap-data-hires
     - shap

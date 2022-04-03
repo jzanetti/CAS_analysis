@@ -58,6 +58,6 @@ cli_feature_analysis --workdir <WORK DIR> --data_src <CAS DATA PATH> --config_fi
 - `<INPUT DATA FORMAT>`: input data format (e.g., by default it is _csv_)
 
 # Contact
-**Note that this package is not peer reviewed yet, please contact Sijin at zsjzyhzp@gmail.com for any questions**
+**Note that this package has not been peer reviewed yet, please contact Sijin at zsjzyhzp@gmail.com for any questions**
 
 
